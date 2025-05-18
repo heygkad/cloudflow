@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudFlow – Real Results. Zero Busywork.</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 3D Spline Background -->
+  <spline-viewer id="spline-bg" url="https://prod.spline.design/NoWPPBZCmk39jnZc/scene.splinecode"></spline-viewer>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="brand">CloudFlow</a>
+      <nav class="navigation">
+        <div class="dropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Menu ▾</button>
+          <div class="dropdown-content" role="menu">
+            <a href="#about" role="menuitem">About</a>
+            <a href="#solutions" role="menuitem">Solutions</a>
+            <a href="#onboarding" role="menuitem">Onboarding</a>
+            <a href="#faq" role="menuitem">FAQ</a>
+            <a href="#contact" role="menuitem">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero">
+    <h1 class="gradient-text">Real Results.</h1>
+    <h1 class="secondary-text">Zero Busywork.</h1>
+    <p class="tagline">CloudFlow is your invisible partner in perfection, optimizing every step of your workflow with precision.</p>
+    <a href="#get-started" class="btn-cta">Get started</a>
+  </main>
+
+  <!-- About Section -->
+  <section id="about" class="section scroll-reveal">
+    <h2>About</h2>
+    <p>Learn how CloudFlow was founded and our mission to eliminate busywork through intelligent automation.</p>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions" class="section scroll-reveal">
+    <h2>Solutions</h2>
+    <p>Explore the suite of CloudFlow tools engineered to streamline your workflows and super-charge productivity.</p>
+  </section>
+
+  <!-- Onboarding Section -->
+  <section id="onboarding" class="section scroll-reveal">
+    <h2>Onboarding</h2>
+    <p>See how easy it is to get started with CloudFlow in three simple steps—no technical expertise required.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section scroll-reveal">
+    <h2>FAQ</h2>
+    <p>Have questions? We've compiled answers to the most common queries about CloudFlow's capabilities and pricing.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section scroll-reveal">
+    <h2>Contact Us</h2>
+    <p>Ready to see CloudFlow in action? Reach out to our team and we'll get back to you within 24 hours.</p>
+    <!-- Simple contact form placeholder -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="How can we help you?" rows="4"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Spline viewer script -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+
+  <!-- Scroll reveal animation script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html> 
