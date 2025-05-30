@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CloudFlow – Real Results. Zero Busywork.</title>
+  <title>TriggerFlow – Real Results. Zero Busywork.</title>
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,91 +11,425 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- 3D Spline Background -->
-  <spline-viewer id="spline-bg" url="https://prod.spline.design/NoWPPBZCmk39jnZc/scene.splinecode"></spline-viewer>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">TriggerFlow</div>
+      <div class="loading-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+      <div class="loading-text">Optimizing your workflow...</div>
+    </div>
+  </div>
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="container">
-      <a href="#" class="brand">CloudFlow</a>
-      <nav class="navigation">
-        <div class="dropdown">
-          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Menu ▾</button>
-          <div class="dropdown-content" role="menu">
-            <a href="#about" role="menuitem">About</a>
-            <a href="#solutions" role="menuitem">Solutions</a>
-            <a href="#onboarding" role="menuitem">Onboarding</a>
-            <a href="#faq" role="menuitem">FAQ</a>
-            <a href="#contact" role="menuitem">Contact Us</a>
+  <!-- Main Content -->
+  <div id="main-content" class="hidden">
+    <!-- 3D Spline Background -->
+    <spline-viewer id="spline-bg" url="https://prod.spline.design/NoWPPBZCmk39jnZc/scene.splinecode"></spline-viewer>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="container">
+        <a href="#" class="brand">TriggerFlow</a>
+        <nav class="navigation">
+          <div class="dropdown">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Menu ▾</button>
+            <div class="dropdown-content" role="menu">
+              <a href="#about" role="menuitem">About</a>
+              <a href="#solutions" role="menuitem">Solutions</a>
+              <a href="#onboarding" role="menuitem">Onboarding</a>
+              <a href="#faq" role="menuitem">FAQ</a>
+              <a href="#contact" role="menuitem">Contact Us</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero">
+      <h1 class="gradient-text hero-animate" data-delay="0">Real Results.</h1>
+      <h1 class="secondary-text hero-animate" data-delay="200">Zero Busywork.</h1>
+      <p class="tagline hero-animate" data-delay="400">TriggerFlow is your invisible partner in perfection, optimizing every step of your workflow with precision.</p>
+      <a href="#get-started" class="btn-cta hero-animate" data-delay="600">Get started</a>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="section scroll-reveal">
+      <h2>About</h2>
+      
+      <div class="about-content">
+        <div class="about-block highlight-block">
+          <h3 class="about-subtitle">Does Any of This Sound Familiar?</h3>
+          <ul class="pain-points">
+            <li>You've tried hiring assistants, only to spend <strong>more time training them</strong> than doing the work yourself.</li>
+            <li>You're <em>missing leads</em> because you can't respond instantly while showing properties.</li>
+            <li>Your evenings are consumed by <strong>follow-up emails and appointment scheduling</strong>.</li>
+            <li>You're stuck doing <strong>$15/hour tasks</strong> when you should be closing <em>$15,000 deals</em>.</li>
+            <li>You've invested in generic CRMs that <strong>don't understand real estate workflows</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="side-by-side-container">
+          <div class="about-block highlight-block">
+            <h3 class="about-subtitle">The Problem Every Successful Agent Faces</h3>
+            <p class="white-emphasis">The better you get, the <strong>busier</strong> you become. <strong>More success means less time.
+
+            <p></strong> We've seen talented agents <em>trapped by their own achievements</em>, working weekends instead of enjoying them.</p>
+          </div>
+
+          <div class="about-block highlight-block">
+            <h3 class="about-subtitle">We Don't Sell Software. We Sell Time Back.</h3>
+            <p>While you're <strong>building relationships and closing deals</strong>, our AI handles the predictable work that's been <em>stealing your life</em>.</p>
+            <p class="closing-statement">You focus on <strong>what made you successful</strong>. We handle <strong><em>everything else</em></strong>.</p>
           </div>
         </div>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </section>
 
-  <!-- Hero Section -->
-  <main class="hero">
-    <h1 class="gradient-text">Real Results.</h1>
-    <h1 class="secondary-text">Zero Busywork.</h1>
-    <p class="tagline">CloudFlow is your invisible partner in perfection, optimizing every step of your workflow with precision.</p>
-    <a href="#get-started" class="btn-cta">Get started</a>
-  </main>
+    <!-- Solutions Section -->
+    <section id="solutions" class="section scroll-reveal">
+      <h2>Solutions</h2>
+      
+      <div class="solutions-content">
+        <div class="solution-item">
+          <div class="solution-header" onclick="toggleSolution(this)">
+            <h3 class="solution-title">AI Chatbots That Actually Get Real Estate</h3>
+            <span class="solution-toggle">+</span>
+          </div>
+          <div class="solution-details">
+            <div class="solution-content-wrapper">
+              <div class="solution-text">
+                <p>Your website works <strong>24/7</strong>, qualifying leads and booking appointments while you sleep. <em>No more missed opportunities.</em></p>
+                <ul class="feature-list">
+                  <li>✓ Instant lead response (under 30 seconds)</li>
+                  <li>✓ Property recommendations based on budget</li>
+                  <li>✓ Automatic appointment booking</li>
+                </ul>
+              </div>
+              <div class="demo-video-placeholder">
+                <div class="video-mockup">
+                  <div class="play-button">▶</div>
+                  <span class="demo-label">Watch Demo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <!-- About Section -->
-  <section id="about" class="section scroll-reveal">
-    <h2>About</h2>
-    <p>Learn how CloudFlow was founded and our mission to eliminate busywork through intelligent automation.</p>
-  </section>
+        <div class="solution-item">
+          <div class="solution-header" onclick="toggleSolution(this)">
+            <h3 class="solution-title">Appointment Scheduling That Ends Phone Tag</h3>
+            <span class="solution-toggle">+</span>
+          </div>
+          <div class="solution-details">
+            <div class="solution-content-wrapper">
+              <div class="solution-text">
+                <p>Clients <strong>book their own showings</strong>. Automatic confirmations. Smart reminders. <em>You show up prepared.</em></p>
+                <ul class="feature-list">
+                  <li>✓ Calendar integration with availability</li>
+                  <li>✓ Automated reminder sequences</li>
+                  <li>✓ Client preference tracking</li>
+                </ul>
+              </div>
+              <div class="demo-video-placeholder">
+                <div class="video-mockup">
+                  <div class="play-button">▶</div>
+                  <span class="demo-label">Watch Demo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <!-- Solutions Section -->
-  <section id="solutions" class="section scroll-reveal">
-    <h2>Solutions</h2>
-    <p>Explore the suite of CloudFlow tools engineered to streamline your workflows and super-charge productivity.</p>
-  </section>
+        <div class="solution-item">
+          <div class="solution-header" onclick="toggleSolution(this)">
+            <h3 class="solution-title">Listing Descriptions That Write Themselves</h3>
+            <span class="solution-toggle">+</span>
+          </div>
+          <div class="solution-details">
+            <div class="solution-content-wrapper">
+              <div class="solution-text">
+                <p>Transform property features into <strong>compelling, search-optimized copy</strong> in minutes. <em>Every listing gets found first.</em></p>
+                <ul class="feature-list">
+                  <li>✓ SEO-optimized descriptions</li>
+                  <li>✓ Multiple style variations</li>
+                  <li>✓ MLS-ready formatting</li>
+                </ul>
+              </div>
+              <div class="demo-video-placeholder">
+                <div class="video-mockup">
+                  <div class="play-button">▶</div>
+                  <span class="demo-label">Watch Demo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <!-- Onboarding Section -->
-  <section id="onboarding" class="section scroll-reveal">
-    <h2>Onboarding</h2>
-    <p>See how easy it is to get started with CloudFlow in three simple steps—no technical expertise required.</p>
-  </section>
+        <div class="solution-item">
+          <div class="solution-header" onclick="toggleSolution(this)">
+            <h3 class="solution-title">Email Follow-Ups That Never Stop Working</h3>
+            <span class="solution-toggle">+</span>
+          </div>
+          <div class="solution-details">
+            <div class="solution-content-wrapper">
+              <div class="solution-text">
+                <p>The right message at the right time. <strong>Welcome sequences, market updates, nurture campaigns</strong>—all automatic, all personalized.</p>
+                <ul class="feature-list">
+                  <li>✓ Behavioral trigger emails</li>
+                  <li>✓ Market report automation</li>
+                  <li>✓ Drip campaign sequences</li>
+                </ul>
+              </div>
+              <div class="demo-video-placeholder">
+                <div class="video-mockup">
+                  <div class="play-button">▶</div>
+                  <span class="demo-label">Watch Demo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="section scroll-reveal">
-    <h2>FAQ</h2>
-    <p>Have questions? We've compiled answers to the most common queries about CloudFlow's capabilities and pricing.</p>
-  </section>
+        <div class="solution-item">
+          <div class="solution-header" onclick="toggleSolution(this)">
+            <h3 class="solution-title">Lead Qualification That Separates Buyers from Browsers</h3>
+            <span class="solution-toggle">+</span>
+          </div>
+          <div class="solution-details">
+            <div class="solution-content-wrapper">
+              <div class="solution-text">
+                <p>Know who's <strong>ready to move</strong> and who needs nurturing. <em>Prioritize your calls. Focus your energy.</em></p>
+                <ul class="feature-list">
+                  <li>✓ Lead scoring algorithms</li>
+                  <li>✓ Engagement tracking</li>
+                  <li>✓ Priority notifications</li>
+                </ul>
+              </div>
+              <div class="demo-video-placeholder">
+                <div class="video-mockup">
+                  <div class="play-button">▶</div>
+                  <span class="demo-label">Watch Demo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section scroll-reveal">
-    <h2>Contact Us</h2>
-    <p>Ready to see CloudFlow in action? Reach out to our team and we'll get back to you within 24 hours.</p>
-    <!-- Simple contact form placeholder -->
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="How can we help you?" rows="4"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <!-- Onboarding Section -->
+    <section id="onboarding" class="section scroll-reveal">
+      <h2>What Working With Us Looks Like</h2>
+      
+      <div class="onboarding-steps">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">Demo Call</h3>
+            <p>We dive into your business goals, current pain points, and <strong>biggest time drains</strong>.</p>
+          </div>
+        </div>
 
-  <!-- Spline viewer script -->
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">Build (1-2 Days)</h3>
+            <p><strong>Custom automation tailored to your workflow</strong>. We handle everything while you <em>keep selling</em>.</p>
+          </div>
+        </div>
 
-  <!-- Scroll reveal animation script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          } else {
-            entry.target.classList.remove('show');
-          }
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">Launch & Support</h3>
+            <p>Go live with <strong>full monitoring</strong>. Direct access to our team during transition.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3 class="step-title">Get Your Life Back</h3>
+            <p>Watch routine tasks <strong>handle themselves</strong> while your business <em>grows</em>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section scroll-reveal">
+      <h2>FAQ</h2>
+      
+      <div class="faq-content">
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span class="faq-text">How quickly will I see results?</span>
+            <span class="faq-arrow">→</span>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Instant.</strong> The moment we launch, leads get <em>immediate responses</em> and appointments book automatically. Most agents see clear improvements <strong>within a day of setup</strong>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span class="faq-text">Will clients know it's AI?</span>
+            <span class="faq-arrow">→</span>
+          </div>
+          <div class="faq-answer">
+            <p>Our systems sound <strong>natural and professional</strong>. Complex questions transition smoothly to you with <em>full context</em>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span class="faq-text">Does this work with my current CRM?</span>
+            <span class="faq-arrow">→</span>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Yes.</strong> We integrate with all major platforms—<em>ClickUp, Notion, Google Calendar, Outlook, WhatsApp, Slack</em>, and most popular CRMs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span class="faq-text">I'm not tech-savvy. Can I handle this?</span>
+            <span class="faq-arrow">→</span>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Built for agents, not IT experts.</strong> Most clients feel confident <em>within the first week</em>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span class="faq-text">Is my data secure?</span>
+            <span class="faq-arrow">→</span>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Enterprise-level security.</strong> Same standards used by major banks. Your information stays <em>encrypted and private</em>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span class="faq-text">Can I customize everything?</span>
+            <span class="faq-arrow">→</span>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Absolutely.</strong> Modify responses, templates, and workflows anytime. <em>We help you get it perfect.</em></p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span class="faq-text">What's your ongoing support like?</span>
+            <span class="faq-arrow">→</span>
+          </div>
+          <div class="faq-answer">
+            <p><strong>Direct team access</strong> during business hours. Regular optimization. System updates. <em>We're your automation partners.</em></p>
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(this)">
+          <div class="faq-question">
+            <span class="faq-text">Any long-term contracts?</span>
+            <span class="faq-arrow">→</span>
+          </div>
+          <div class="faq-answer">
+            <p><strong>No lock-ins.</strong> We earn your business every month with <em>results</em>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section scroll-reveal">
+      <h2>Contact Us</h2>
+      <p>Ready to see TriggerFlow in action? Reach out to our team and we'll get back to you within 24 hours.</p>
+      <!-- Simple contact form placeholder -->
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="How can we help you?" rows="4"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Spline viewer script -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+
+    <!-- Scroll reveal animation script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+      });
+
+      // Loading screen control
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loadingScreen = document.getElementById('loading-screen');
+          const mainContent = document.getElementById('main-content');
+          
+          loadingScreen.classList.add('fade-out');
+          
+          setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            mainContent.classList.remove('hidden');
+            
+            // Trigger hero animations
+            const heroElements = document.querySelectorAll('.hero-animate');
+            heroElements.forEach((element, index) => {
+              const delay = parseInt(element.dataset.delay) || 0;
+              setTimeout(() => {
+                element.classList.add('show');
+              }, delay);
+            });
+          }, 500);
+        }, 1500); // Show loading for at least 1.5 seconds
+      });
+
+      // Solution toggle functionality
+      function toggleSolution(header) {
+        const solutionItem = header.parentElement;
+        const isActive = solutionItem.classList.contains('active');
+        
+        // Close all other solutions
+        document.querySelectorAll('.solution-item').forEach(item => {
+          item.classList.remove('active');
         });
-      }, { threshold: 0.15 });
+        
+        // Toggle current solution
+        if (!isActive) {
+          solutionItem.classList.add('active');
+        }
+      }
 
-      document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-    });
-  </script>
+      // FAQ toggle functionality
+      function toggleFAQ(faqItem) {
+        const isActive = faqItem.classList.contains('active');
+        
+        // Allow multiple FAQs to be open at once
+        if (isActive) {
+          faqItem.classList.remove('active');
+        } else {
+          faqItem.classList.add('active');
+        }
+      }
+    </script>
+  </div>
 </body>
 </html> 
