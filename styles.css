@@ -16,7 +16,7 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 8px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,15 +29,10 @@
     left: 0;
     width: 100%;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 10px 0;
-    transition: transform 0.3s ease-in-out, background 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .navbar.hidden {
-    transform: translateY(-100%);
+    background: rgba(0, 0, 0, 0.4); /* 40% transparent background */
+    backdrop-filter: blur(8px); /* Add subtle blur for better readability */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Thin border line */
+    padding: 5px 0;
   }
   
   .brand {
@@ -50,7 +45,7 @@
   .navigation a {
     margin-left: 34px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     color: #fff;
     transition: opacity 0.2s ease;
@@ -81,9 +76,9 @@
     border: none;
     color: #fff;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 4px 8px;
   }
   
   .dropbtn:focus {
@@ -234,7 +229,7 @@
   .section {
     padding: 120px 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 80px auto; /* Added 80px bottom margin for spacing between sections */
     text-align: center;
     scroll-margin-top: 100px; /* offset for fixed navbar */
   
@@ -769,7 +764,7 @@
     align-items: flex-start;
     margin-bottom: 60px;
     position: relative;
-    justify-content: center;
+    padding-left: 90px; /* Add padding to make room for step numbers */
   }
 
   .step-item:last-child {
@@ -810,9 +805,9 @@
   }
 
   .step-content {
-    max-width: 500px;
+    flex: 1; /* Take up remaining space */
+    text-align: left; /* Change from center to left alignment */
     padding-top: 8px;
-    text-align: center;
   }
 
   .step-title {
@@ -837,13 +832,13 @@
   @media (max-width: 768px) {
     .step-item {
       margin-bottom: 40px;
+      padding-left: 70px; /* Reduced padding for mobile */
     }
     
     .step-number {
       width: 50px;
       height: 50px;
       font-size: 20px;
-      margin-right: 20px;
     }
     
     .step-item::after {
@@ -853,6 +848,10 @@
     
     .step-title {
       font-size: 20px;
+    }
+
+    .onboarding-steps {
+      padding: 30px 20px 15px 20px; /* Reduced padding for mobile */
     }
   }
 

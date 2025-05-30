@@ -429,24 +429,6 @@
           faqItem.classList.add('active');
         }
       }
-
-      // Navbar scroll behavior
-      let lastScrollTop = 0;
-      const navbar = document.querySelector('.navbar');
-      
-      window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-          // Scrolling down - hide navbar
-          navbar.classList.add('hidden');
-        } else {
-          // Scrolling up - show navbar
-          navbar.classList.remove('hidden');
-        }
-        
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      });
     </script>
   </div>
 </body>
